@@ -1,0 +1,23 @@
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap';
+
+
+:root[data-theme="light"] {
+   --background-color: #fff;
+   --switcher-bg: #f2f2f2;
+   --switcher-circle-bg: #fff;
+   --switcher-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
+   --text-color: #333;
+   --logo-img: url('./resources/img/logo.svg');
+}
+
+:root[data-theme="dark"] {
+   --background-color: #333;
+   --switcher-bg: #4f4f4f;
+   --switcher-circle-bg: #1B1B1B;
+   --switcher-shadow: 2px 4px 15px rgba(230, 230, 230, 0.15);
+   --text-color: #fefefe;
+   --logo-img: url('./resources/img/logo-dark.svg');
+
+}
+
