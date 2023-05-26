@@ -69,13 +69,18 @@
    flex-direction: column;
    list-style-type: none;
    padding: 0;
-   transform: translateX(-2000px);
+   transform: translateX(-8000px);
    overflow: hidden;
    transition: all 0.3s;
 }
 
 .header__nav-burger.active {
+   padding: 20px 0 20px 0;
    transform: translateX(0);
+}
+
+.margin-10{
+   margin: 10px 0 10px 0;
 }
 
 @media (max-width: 992px) {

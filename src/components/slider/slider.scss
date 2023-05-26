@@ -1,0 +1,97 @@
+.preview__slider {
+   position: absolute;
+   width: 1442px;
+   left: 823px;
+   bottom: 10px;
+   display: flex;
+   align-items: center;
+
+   &-description{
+      display: none;
+   } 
+   &-btns{
+      display: none;
+   }
+
+   &-item {
+      width: 140px;
+      height: 203px;
+      filter: drop-shadow(5px 4px 50px rgba(152, 157, 198, 0.25));
+      border-radius: 5px;
+      &:not(:first-child) {
+         margin-left: 46px;
+      }
+   }
+
+   .eagle-bg {
+      background: url('../../resources/img/slider/eagle.png');
+      background-size: cover;
+      background-position: center;
+      z-index: 5;
+   }
+
+   .panda-bg {
+      background: url('../../resources/img/slider/panda.png');
+      background-size: cover;
+      background-position: center;
+      z-index: 5;
+   }
+
+   .monkey-bg {
+      background: url('../../resources/img/slider/monkey.png');
+      background-size: cover;
+      background-position: center;
+      z-index: 5;
+   }
+
+   .aligator-bg {
+      background: url('../../resources/img/slider/aligator.png');
+      background-size: cover;
+      background-position: center;
+      z-index: 5;
+   }
+
+   .fox-bg {
+      background: url('../../resources/img/slider/fox.png');
+      background-size: cover;
+      background-position: center;
+      z-index: 5;
+   }
+
+   .sloth-bg {
+      background: url('../../resources/img/slider/sloth.png');
+      background-size: cover;
+      background-position: center;
+      z-index: 5;
+   }
+
+   .elephant-bg {
+      background: url('../../resources/img/slider/elephant.png');
+      background-size: cover;
+      background-position: center;
+      z-index: 5;
+   }
+
+   .panter-bg {
+      background: url('../../resources/img/slider/panter.png');
+      background-size: cover;
+      background-position: center;
+      z-index: 5;
+   }
+
+   .active-scail{
+      width: 245px;
+      height: 352px;
+   }
+
+}
+
+.preview__slider::after{
+   position: absolute;
+   content: '';
+   width: 1000px;
+   height: 13px;
+   background: url('../../resources//img/slider/line.svg');
+   left: -122px;
+   z-index: 1;   
+}

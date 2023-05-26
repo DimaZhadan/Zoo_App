@@ -53,19 +53,19 @@ const HeaderApp = () => {
                      <Burger />
                   </div>
                   <ul className="header__nav-burger">
-                     <li className="header__nav-item">
+                     <li className="header__nav-item margin-10">
                         <a href="#" className="header__nav-link">About</a>
                      </li>
-                     <li className="header__nav-item">
+                     <li className="header__nav-item margin-10">
                         <a href="#" className="header__nav-link">Zoos</a>
                      </li>
-                     <li className="header__nav-item">
+                     <li className="header__nav-item margin-10">
                         <a href="#" className="header__nav-link">Map</a>
                      </li>
-                     <li className="header__nav-item">
+                     <li className="header__nav-item margin-10">
                         <a href="#" className="header__nav-link">Contact Us</a>
                      </li>
-                     <li className="header__nav-item">
+                     <li className="header__nav-item margin-10">
                         <a href="#" className="header__nav-link">Design</a>
                      </li>
                   </ul>

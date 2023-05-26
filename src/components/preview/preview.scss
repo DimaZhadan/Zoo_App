@@ -1,0 +1,71 @@
+@import '../../index.scss';
+
+.preview {
+
+   .container {
+      position: relative;
+      overflow: hidden;
+   }
+
+   padding: 128px 0 138px 0;
+   margin: 0;
+   background: url('../../resources/img/preview.jpg') no-repeat;
+
+   &__header {
+      width: 793px;
+      margin: 0 0 0 208px;
+      font-family: 'Roboto';
+      font-weight: 900;
+      font-size: 89px;
+      line-height: 104px;
+      color: #FEFEFE;
+   }
+
+   .preview__btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 245px;
+      height: 55px;
+      background: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%);
+      border-radius: 3px;
+      outline: none;
+      cursor: pointer;
+      margin: 37px 0 216px 208px;
+
+
+      a {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         font-family: 'Roboto';
+         font-weight: 900;
+         font-size: 18px;
+         line-height: 21px;
+         text-align: center;
+         text-transform: uppercase;
+         color: #FFFFFF;
+         text-decoration: none;
+      }
+
+      img {
+         margin-right: 5px;
+      }
+
+   }
+
+   &__social {
+      &-logo {
+         &:not(:last-child) {
+            margin-bottom: 15px;
+         }
+      }
+
+   }
+}
+
+@media (min-width: 1900px) {
+   .preview {
+      background-size: cover;
+   }
+}
