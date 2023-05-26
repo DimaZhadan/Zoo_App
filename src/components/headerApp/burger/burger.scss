@@ -1,0 +1,42 @@
+.burger {
+   display: none;
+   position: relative;
+   width: 40px;
+   height: 21px;
+   cursor: pointer;
+   margin-left: 34px;
+
+   span{
+      display: block;
+      transform: translateY(295%);
+      width: 40px;
+      height: 3px;
+      background: var(--text-color);
+   }
+
+   &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      width: 40px;
+      height: 3px;
+      background: var(--text-color);
+   }
+   &::after {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      content: '';
+      width: 33px;
+      height: 3px;
+      background: var(--text-color);
+   }
+}
+
+@media (max-width: 992px) {
+   .burger{
+      display: block;
+   }
+}
+

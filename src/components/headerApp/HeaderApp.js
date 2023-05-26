@@ -1,10 +1,12 @@
 import React from 'react';
-import Switcher from './switcher/Switcher';
+
 import { ThemeContext, themes } from '../../context/theme-context';
+
+import Switcher from './switcher/Switcher';// eslint-disable-line no-use-before-define
+import Burger from './burger/Burger';
 
 import './headerApp.scss';
 import '../../index.scss'
-import appLogo from '../../resources/img/logo.svg';
 
 const HeaderApp = () => {
    return (
@@ -35,18 +37,38 @@ const HeaderApp = () => {
                      </li>
                   </ul>
                </li>
-               <li>
-                  <ThemeContext.Consumer>
-                     {({ theme, setTheme }) => (
-                        <Switcher
-                           onChange={() => {
-                              if (theme === themes.light) setTheme(themes.dark)
-                              if (theme === themes.dark) setTheme(themes.light)
-                           }}
-                           value={theme === themes.dark}
-                        />
-                     )}
-                  </ThemeContext.Consumer>
+               <li className="header__list-item">
+                  <div className='header__list-wrapper'>
+                     <ThemeContext.Consumer>
+                        {({ theme, setTheme }) => (
+                           <Switcher
+                              onChange={() => {
+                                 if (theme === themes.light) setTheme(themes.dark)
+                                 if (theme === themes.dark) setTheme(themes.light)
+                              }}
+                              value={theme === themes.dark}
+                           />
+                        )}
+                     </ThemeContext.Consumer>
+                     <Burger />
+                  </div>
+                  <ul className="header__nav-burger">
+                     <li className="header__nav-item">
+                        <a href="#" className="header__nav-link">About</a>
+                     </li>
+                     <li className="header__nav-item">
+                        <a href="#" className="header__nav-link">Zoos</a>
+                     </li>
+                     <li className="header__nav-item">
+                        <a href="#" className="header__nav-link">Map</a>
+                     </li>
+                     <li className="header__nav-item">
+                        <a href="#" className="header__nav-link">Contact Us</a>
+                     </li>
+                     <li className="header__nav-item">
+                        <a href="#" className="header__nav-link">Design</a>
+                     </li>
+                  </ul>
                </li>
             </ul>
          </nav>

@@ -1,6 +1,9 @@
 @import 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap';
 @import 'https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap';
 
+body{
+   margin: 0;
+}
 
 :root[data-theme="light"] {
    --background-color: #fff;
