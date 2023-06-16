@@ -1,97 +1,155 @@
-.preview__slider {
+.slider {
    position: absolute;
-   width: 1442px;
-   left: 823px;
+   padding-left: 113px;
+   max-width: 870px;
+   height: 450px;
+   left: 710px;
+   top: 250px;
    bottom: 10px;
-   display: flex;
-   align-items: center;
+   overflow: hidden;
 
-   &-description{
-      display: none;
-   } 
-   &-btns{
-      display: none;
-   }
+   .preview__slider {
+      position: relative;
+      width: 1540px;
+      height: 450px;
 
-   &-item {
-      width: 140px;
-      height: 203px;
-      filter: drop-shadow(5px 4px 50px rgba(152, 157, 198, 0.25));
-      border-radius: 5px;
-      &:not(:first-child) {
-         margin-left: 46px;
+      &-wrapper {
+         position: absolute;
+         display: flex;
+         width: 1540px;
+         height: 380px;
+         justify-content: start;
+         align-items: center;
+         overflow: hidden;
       }
+
+      &-description {
+         display: none;
+      }
+
+      &-btns {
+         display: none;
+      }
+
+      &-item {
+         width: 140px;
+         height: 203px;
+         filter: drop-shadow(5px 4px 20px rgba(152, 157, 198, 0.25));
+         border-radius: 5px;
+
+         &:not(:first-child) {
+            margin-left: 46px;
+         }
+      }
+
+      &-pagination {
+         position: absolute;
+         bottom: 0;
+         margin-left: 186px;
+         font-family: 'Roboto';
+         font-style: normal;
+         font-weight: 900;
+         font-size: 14px;
+         line-height: 16px;
+         color: #BDBDBD;
+      }
+
+      &-numbers {
+         span {
+            margin-left: 96px;
+            font-size: 24px;
+            line-height: 28px;
+            color: #FEFEFE;
+         }
+      }
+
+      .eagle-bg {
+         background: url('../../resources/img/slider/eagle.png');
+         background-size: cover;
+         background-position: center;
+         z-index: 5;
+      }
+
+      .panda-bg {
+         background: url('../../resources/img/slider/panda.png');
+         background-size: cover;
+         background-position: center;
+         z-index: 5;
+      }
+
+      .monkey-bg {
+         background: url('../../resources/img/slider/monkey.png');
+         background-size: cover;
+         background-position: center;
+         z-index: 5;
+      }
+
+      .aligator-bg {
+         background: url('../../resources/img/slider/aligator.png');
+         background-size: cover;
+         background-position: center;
+         z-index: 5;
+      }
+
+      .fox-bg {
+         background: url('../../resources/img/slider/fox.png');
+         background-size: cover;
+         background-position: center;
+         z-index: 5;
+      }
+
+      .sloth-bg {
+         background: url('../../resources/img/slider/sloth.png');
+         background-size: cover;
+         background-position: center;
+         z-index: 5;
+      }
+
+      .elephant-bg {
+         background: url('../../resources/img/slider/elephant.png');
+         background-size: cover;
+         background-position: center;
+         z-index: 5;
+      }
+
+      .panter-bg {
+         background: url('../../resources/img/slider/panter.png');
+         background-size: cover;
+         background-position: center;
+         z-index: 5;
+      }
+
+      .active-scail {
+         width: 245px;
+         height: 352px;
+      }
+
+      &-scroll {
+         width: 245px;
+         height: 5px;
+         background: rgba(189, 189, 189, 0.57);
+         margin-top: 14px;
+      }
+
+      &-dots {
+         width: 30px;
+         height: 10px;
+         background: #FEFEFE;
+      }
+
    }
 
-   .eagle-bg {
-      background: url('../../resources/img/slider/eagle.png');
-      background-size: cover;
-      background-position: center;
-      z-index: 5;
-   }
-
-   .panda-bg {
-      background: url('../../resources/img/slider/panda.png');
-      background-size: cover;
-      background-position: center;
-      z-index: 5;
-   }
-
-   .monkey-bg {
-      background: url('../../resources/img/slider/monkey.png');
-      background-size: cover;
-      background-position: center;
-      z-index: 5;
-   }
-
-   .aligator-bg {
-      background: url('../../resources/img/slider/aligator.png');
-      background-size: cover;
-      background-position: center;
-      z-index: 5;
-   }
-
-   .fox-bg {
-      background: url('../../resources/img/slider/fox.png');
-      background-size: cover;
-      background-position: center;
-      z-index: 5;
-   }
-
-   .sloth-bg {
-      background: url('../../resources/img/slider/sloth.png');
-      background-size: cover;
-      background-position: center;
-      z-index: 5;
-   }
-
-   .elephant-bg {
-      background: url('../../resources/img/slider/elephant.png');
-      background-size: cover;
-      background-position: center;
-      z-index: 5;
-   }
-
-   .panter-bg {
-      background: url('../../resources/img/slider/panter.png');
-      background-size: cover;
-      background-position: center;
-      z-index: 5;
-   }
-
-   .active-scail{
-      width: 245px;
-      height: 352px;
-   }
 
 }
 
-.preview__slider::after{
+.slider::before {
    position: absolute;
    content: '';
    width: 1000px;
    height: 13px;
    background: url('../../resources//img/slider/line.svg');
-   left: -122px;
-   z-index: 1;   
+   left: 0;
+   top: 200px;
+   z-index: 0;
 }
+// 

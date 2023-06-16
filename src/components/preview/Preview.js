@@ -32,6 +32,7 @@ const Preview = () => {
             </div>
             <Slider/>
          </div>
+         <div className="line"></div>
       </section>
    )
 }
