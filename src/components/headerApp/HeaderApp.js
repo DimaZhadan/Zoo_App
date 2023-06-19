@@ -6,7 +6,8 @@ import Switcher from './switcher/Switcher';// eslint-disable-line no-use-before-
 import Burger from './burger/Burger';
 
 import './headerApp.scss';
-import '../../index.scss'
+import '../../index.scss';
+import '../app/App.scss';
 
 const HeaderApp = () => {
    return (

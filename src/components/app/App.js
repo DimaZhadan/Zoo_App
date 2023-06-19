@@ -1,6 +1,6 @@
 import HeaderApp from '../headerApp/HeaderApp';
 import Preview from '../preview/Preview';
-import './App.css';
+import './App.scss';
 
 function App() {
   return (

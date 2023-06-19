@@ -2,9 +2,9 @@
    position: absolute;
    padding-left: 113px;
    max-width: 870px;
-   height: 450px;
-   left: 710px;
-   top: 250px;
+   height: 500px;
+   right: 0;
+   top: 390px;
    bottom: 10px;
    overflow: hidden;
 
@@ -17,7 +17,7 @@
          position: absolute;
          display: flex;
          width: 1540px;
-         height: 380px;
+         height: 450px;
          justify-content: start;
          align-items: center;
          overflow: hidden;
@@ -25,17 +25,110 @@
 
       &-description {
          display: none;
+         font-family: 'Roboto';
+         font-weight: 400;
+         font-size: 14px;
+         line-height: 16px;
+         color: #FFFFFF;
+         margin-top: 232px;
       }
 
       &-btns {
          display: none;
+
+         &-online {
+            display: flex;
+            align-items: center;
+            outline: none;
+            border: none;
+            width: 135px;
+            height: 24px;
+            background: none;
+            font-family: 'Roboto';
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 14px;
+            text-align: center;
+            text-transform: uppercase;
+            word-wrap: none;
+            color: #fff;
+            cursor: pointer;
+
+            svg {
+               width: 26px;
+               height: 26px;
+               margin-right: 3px;
+
+            }
+         }
+
+         &-online:hover {
+            color: #4BD8B5;
+
+            svg {
+               circle {
+                  // fill: #4BD8B5;
+                  stroke: #4BD8B5;
+               }
+
+               path {
+                  fill: #4BD8B5;
+               }
+            }
+         }
+
+         &-donate {
+            display: flex;
+            align-items: center;
+            width: 90px;
+            height: 24px;
+            background: none;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            font-family: 'Roboto';
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 14px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #fff;
+
+            div {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               min-width: 24px;
+               min-height: 24px;
+               border-radius: 100%;
+               border: 1px solid white;
+               margin-right: 3px;
+
+            }
+         }
+
+         &-donate:hover {
+            color: #4BD8B5;
+
+            div {
+               border-color: #4BD8B5;
+
+               path {
+                  fill: #4BD8B5;
+               }
+            }
+         }
       }
 
       &-item {
+         box-sizing: border-box;
          width: 140px;
          height: 203px;
          filter: drop-shadow(5px 4px 20px rgba(152, 157, 198, 0.25));
          border-radius: 5px;
+         transition: ease 0.3s;
+         padding: 0 10px 34px 10px;
+         cursor: pointer;
 
          &:not(:first-child) {
             margin-left: 46px;
@@ -44,7 +137,8 @@
 
       &-pagination {
          position: absolute;
-         bottom: 0;
+         bottom: -25px;
+         margin-top: 50px;
          margin-left: 186px;
          font-family: 'Roboto';
          font-style: normal;
@@ -122,6 +216,17 @@
       .active-scail {
          width: 245px;
          height: 352px;
+         border-radius: 5px;
+         transition: ease 0.3s;
+
+         .preview__slider-description {
+            display: block;
+         }
+
+         .preview__slider-btns {
+            display: flex;
+            align-items: center;
+         }
       }
 
       &-scroll {
@@ -139,7 +244,6 @@
 
    }
 
-
 }
 
 .slider::before {
@@ -152,4 +256,27 @@
    top: 200px;
    z-index: 0;
 }
-// 
+
+@media (max-width: 1330px) {
+   .slider {
+      max-width: 750px;
+   }
+}
+
+@media (max-width: 1600px) {
+   .slider {
+      max-width: 650px;
+   }
+}
+
+@media (max-width: 1430px) {
+   .slider {
+      max-width: 550px;
+   }
+}
+
+@media(max-width: 992px){
+   .slider {
+      max-width: 320px;
+   }
+}

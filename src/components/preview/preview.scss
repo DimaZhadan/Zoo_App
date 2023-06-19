@@ -1,12 +1,7 @@
 @import '../../index.scss';
 
 .preview {
-
-   .container {
-      position: relative;
-      // overflow: hidden;
-   }
-
+   position: relative;
    padding: 206px 0 138px 0;
    margin: 0;
    background: url('../../resources/img/preview.jpg') no-repeat;
@@ -70,3 +65,39 @@
    }
 }
 
+@media(max-width:1600px) {
+   .preview {
+
+      &__header {
+         margin: 0 0 0 0px;
+      }
+
+      .preview__btn {
+         margin: 37px 0 216px 0px;
+      }
+   }
+}
+
+@media(max-width: 1200px) {
+   .preview {
+
+      &__header {
+         font-size: 64px;
+         line-height: 75px;
+      }
+   }
+}
+
+@media(max-width:986px) {
+   .preview {
+      padding-bottom: 450px;
+      &__social {
+         display: none;
+      }
+      &__header {
+         font-size: 48px;
+         line-height: 56px;
+         width: 100%;
+      }
+   }
+}

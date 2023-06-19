@@ -1,8 +1,12 @@
-.container{
+.container {
    max-width: 1640px;
    box-sizing: border-box;
    margin: 0 auto;
    padding: 0 10px;
-   
 }
 
+@media (max-width: 1600px) {
+   .container {
+      max-width: 900px;
+   }
+}
