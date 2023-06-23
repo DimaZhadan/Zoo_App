@@ -16,7 +16,6 @@ const Slider = () => {
    const [transitionX, setTransitionX] = useState(0);
 
    const onMouseDown = useCallback(e => {
-      e.preventDefault()
       if (swipeInfo) return;
       setPosition(e.clientX || parseInt(e.touches[0].clientX));
       setSwipeInfo(true);
@@ -39,19 +38,23 @@ const Slider = () => {
       const swiperWrapper = document.querySelector('.preview__slider');
       const swiperPosLeft = swiperWrapper.getBoundingClientRect().left;
       const swiperPosRight = swiperWrapper.getBoundingClientRect().right;
-      console.log(swiperWrapper);
-      // console.log(swiperPosRight);      
-      console.log(swiperPosLeft);
-      console.log(swiperPosRight);
+
+      function innerWidth() {
+         if (window.innerWidth > 576) {
+            return 400;
+         } else {
+            return 250;
+         }
+      }
 
       if (delta < 0) {
          if (lastElement.getBoundingClientRect().x < swiperPosRight - 1000) return;
          ref.current.style.transition = 'all 0.3s ease-in-out';
-         setTransitionX(transitionX - 400);
+         setTransitionX(transitionX - innerWidth());
       } else if (delta > 0) {
          if (firstElement.getBoundingClientRect().x > swiperPosLeft - 50) return;
          ref.current.style.transition = 'all 0.3s ease-in-out';
-         setTransitionX(transitionX + 400);
+         setTransitionX(transitionX + innerWidth());
       } else {
          ref.current.style.transition = 'all 0.3s ease-in-out';
       }
@@ -81,7 +84,6 @@ const Slider = () => {
    const focusOnItem = (id) => {
       itemRefs.current.forEach(item => item.classList.remove('active-scail'));
       itemRefs.current[id].classList.add('active-scail');
-      itemRefs.current[id].focus();
    }
 
    const elements = data.map((item, i) => {

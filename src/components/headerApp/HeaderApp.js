@@ -5,6 +5,10 @@ import { ThemeContext, themes } from '../../context/theme-context';
 import Switcher from './switcher/Switcher';// eslint-disable-line no-use-before-define
 import Burger from './burger/Burger';
 
+import instagramLogo from '../../resources/img/instagram.svg';
+import twitterLogo from '../../resources/img/twitter.svg';
+import youtubeLogo from '../../resources/img/youTube.svg';
+
 import './headerApp.scss';
 import '../../index.scss';
 import '../app/App.scss';
@@ -68,6 +72,17 @@ const HeaderApp = () => {
                      </li>
                      <li className="header__nav-item margin-10">
                         <a href="#" className="header__nav-link">Design</a>
+                     </li>
+                     <li className='header__social'>
+                        <div className='header__social-logo'>
+                           <a href="#"><img src={instagramLogo} alt="Instagram logo" /></a>
+                        </div>
+                        <div className='header__social-logo'>
+                           <a href="#"><img src={twitterLogo} alt="Twitter logo" /></a>
+                        </div>
+                        <div className='header__social-logo'>
+                           <a href="#"><img src={youtubeLogo} alt="YouTube logo" /></a>
+                        </div>
                      </li>
                   </ul>
                </li>

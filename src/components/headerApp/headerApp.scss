@@ -54,6 +54,10 @@
          text-decoration: underline;
       }
    }
+
+   &__social {
+      display: none;
+   }
 }
 
 .header__nav-burger {
@@ -92,3 +96,21 @@
       }
    }
 }
+
+@media(max-width:640px) {
+
+   .header {
+      &__social {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin-top: 15px;
+
+         &-logo {
+            margin: 0 10px 0 10px;
+         }
+
+      }
+   }
+}
+
