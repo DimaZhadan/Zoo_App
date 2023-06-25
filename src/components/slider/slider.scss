@@ -1,3 +1,5 @@
+@import '../../index.scss';
+
 .slider {
    position: absolute;
    padding-left: 113px;
@@ -228,9 +230,11 @@
       }
 
       &-dots {
+         position: absolute;
+         top: 39px;
          width: 30px;
          height: 10px;
-         background: #FEFEFE;
+         background: var(--pagination-dots-bg);
       }
 
    }
@@ -302,9 +306,7 @@
 
             &-donate,
             &-online {
-               font-family: 'Roboto';
-               font-style: normal;
-               font-weight: 500;
+
                font-size: 10px;
                line-height: 12px;
             }
@@ -352,6 +354,12 @@
 
    .slider::before {
       top: 215px;
+      left: 20px;
+   }
+}
+
+@media(max-width: 374px) {
+   .slider::before {
       left: 55px;
    }
 }

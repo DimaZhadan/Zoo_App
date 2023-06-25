@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
-import Pagination from './pagination/Pagination';
 
 import sliderData from '../../services/sliderData.json';
 
@@ -14,6 +13,7 @@ const Slider = () => {
    const [position, setPosition] = useState(0);
    const [swipeInfo, setSwipeInfo] = useState(false);
    const [transitionX, setTransitionX] = useState(0);
+   const [itemId, setItemId] = useState('00');
 
    const onMouseDown = useCallback(e => {
       if (swipeInfo) return;
@@ -84,6 +84,11 @@ const Slider = () => {
    const focusOnItem = (id) => {
       itemRefs.current.forEach(item => item.classList.remove('active-scail'));
       itemRefs.current[id].classList.add('active-scail');
+      setItemId(itemRefs.current[id].id);
+   }
+
+   const onScrollClick = () => {
+
    }
 
    const elements = data.map((item, i) => {
@@ -123,7 +128,15 @@ const Slider = () => {
                style={{ transform: `translateX(${transitionX}px)` }}>
                {elements}
             </div>
-            <Pagination />
+            <div className='preview__slider-pagination'>
+               <div className='preview__slider-numbers'>
+                  <span >{itemId}/</span>08
+               </div>
+               <div className='preview__slider-scroll'>
+                  <div className='preview__slider-dots'
+                     onClick={onScrollClick}></div>
+               </div>
+            </div>
          </div>
       </div>
    )

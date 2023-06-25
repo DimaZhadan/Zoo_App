@@ -1,7 +1,7 @@
 @import 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap';
 @import 'https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap';
 
-body{
+body {
    margin: 0;
 }
 
@@ -12,6 +12,7 @@ body{
    --switcher-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
    --text-color: #333;
    --logo-img: url('./resources/img/logo.svg');
+   --pagination-dots-bg: #333;
 }
 
 :root[data-theme="dark"] {
@@ -21,6 +22,6 @@ body{
    --switcher-shadow: 2px 4px 15px rgba(230, 230, 230, 0.15);
    --text-color: #fefefe;
    --logo-img: url('./resources/img/logo-dark.svg');
+   --pagination-dots-bg: #fefefe;
 
 }
-
