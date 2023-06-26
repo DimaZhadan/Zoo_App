@@ -5,12 +5,14 @@
    height: 21px;
    cursor: pointer;
    margin-left: 34px;
+   transition: ease 0.5s;
 
-   span{
+   span {
       display: block;
       transform: translateY(295%);
       width: 40px;
       height: 3px;
+      transition: ease 0.5s;
       background: var(--text-color);
    }
 
@@ -22,7 +24,9 @@
       width: 40px;
       height: 3px;
       background: var(--text-color);
+      transition: ease 0.5s;
    }
+
    &::after {
       position: absolute;
       bottom: 0;
@@ -30,13 +34,37 @@
       content: '';
       width: 33px;
       height: 3px;
+      transition: ease 0.5s;
       background: var(--text-color);
    }
 }
 
-@media (max-width: 992px) {
-   .burger{
-      display: block;
+.burger.click {
+   transition: ease 0.5s;
+
+   span {
+      width: 0;
+      transition: ease 0.5s;
+   }
+
+   &::before {
+      transition: ease 0.5s;
+      transform: rotate(-45deg);
+      top: 9px;
+      left: 1px;
+   }
+
+   &::after {
+      transition: ease 0.5s;
+      width: 40px;
+      transform: rotate(45deg);
+      bottom: 8px;
+      left: 2px;
    }
 }
 
+@media (max-width: 992px) {
+   .burger {
+      display: block;
+   }
+}

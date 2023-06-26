@@ -10,10 +10,12 @@ const Slider = () => {
    const data = sliderData.data;
    const ref = useRef(null);
    const itemRefs = useRef([]);
+
    const [position, setPosition] = useState(0);
    const [swipeInfo, setSwipeInfo] = useState(false);
    const [transitionX, setTransitionX] = useState(0);
-   const [itemId, setItemId] = useState('00');
+   const [itemId, setItemId] = useState('02');
+   const [value, setValue] = useState(0);
 
    const onMouseDown = useCallback(e => {
       if (swipeInfo) return;
@@ -87,10 +89,24 @@ const Slider = () => {
       setItemId(itemRefs.current[id].id);
    }
 
-   const onScrollClick = () => {
+   const onScrollClick = (e) => {
+      setValue(e.target.value);
+      let bias;
+      if (window.innerWidth > 576) {
+         bias = 200;
+      } else {
+         bias = 100;
+      }
+      for (let i = 1; i <= 8; i++) {
+         if (value == 0 || value == 1) {
+            setTransitionX(0)
+         } else if (value == i) {
+            setTransitionX(i * -bias);
+         }
+      }
+   };
 
-   }
-
+   console.log(value);
    const elements = data.map((item, i) => {
       return (
          <div className={'preview__slider-item ' + item.classBg}
@@ -133,8 +149,16 @@ const Slider = () => {
                   <span >{itemId}/</span>08
                </div>
                <div className='preview__slider-scroll'>
-                  <div className='preview__slider-dots'
-                     onClick={onScrollClick}></div>
+                  <input type='range'
+                     name='volume'
+                     id='scroll-range'
+                     min={0}
+                     max={8}
+                     step={1}
+                     defaultValue={2}
+                     className='preview__slider-dots'
+                     onInput={e => onScrollClick(e)}
+                  ></input>
                </div>
             </div>
          </div>

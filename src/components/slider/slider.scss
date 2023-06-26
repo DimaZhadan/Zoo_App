@@ -23,6 +23,7 @@
          justify-content: start;
          align-items: center;
          overflow: hidden;
+         transition: all 0.3s ease-in-out;
       }
 
       &-description {
@@ -139,6 +140,7 @@
          font-size: 14px;
          line-height: 16px;
          color: #BDBDBD;
+         user-select: none;
       }
 
       &-numbers {
@@ -223,17 +225,16 @@
       }
 
       &-scroll {
-         width: 245px;
-         height: 5px;
-         background: rgba(189, 189, 189, 0.57);
-         margin-top: 14px;
+         input[tupe=range] {
+            background: #fefefe;
+         }
+
       }
 
       &-dots {
-         position: absolute;
-         top: 39px;
-         width: 30px;
-         height: 10px;
+         display: block;
+         margin-top: 10px;
+         width: 245px;
          background: var(--pagination-dots-bg);
       }
 
@@ -277,7 +278,7 @@
       top: 290px;
       padding-left: 71px;
       max-width: 300px;
-      height: 400px;
+      height: 410px;
 
       .preview__slider {
          width: 1190px;
@@ -342,12 +343,8 @@
             }
          }
 
-         &-scroll {
-            width: 140px;
-         }
-
          &-dots {
-            width: 17px;
+            width: 140px;
          }
       }
    }

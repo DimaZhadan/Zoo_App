@@ -13,6 +13,7 @@ body {
    --text-color: #333;
    --logo-img: url('./resources/img/logo.svg');
    --pagination-dots-bg: #333;
+   --social-logo-color: #333;
 }
 
 :root[data-theme="dark"] {
@@ -23,5 +24,6 @@ body {
    --text-color: #fefefe;
    --logo-img: url('./resources/img/logo-dark.svg');
    --pagination-dots-bg: #fefefe;
+   --social-logo-color: #fefefe;
 
 }
