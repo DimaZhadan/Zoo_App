@@ -225,8 +225,83 @@
       }
 
       &-scroll {
-         input[tupe=range] {
-            background: #fefefe;
+
+         input[type=range] {
+            height: 5px;
+            -webkit-appearance: none;
+            width: 245px;
+            background: rgba(189, 189, 189, 0.57);
+         }
+
+         input[type=range]:focus {
+            outline: none;
+         }
+
+         input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 5px;
+            cursor: pointer;
+            animate: 0.2s;
+            background: rgba(189, 189, 189, 0.57);
+         }
+
+         input[type=range]::-webkit-slider-thumb {
+            height: 10px;
+            width: 30px;
+            background: var(--pagination-dots-bg);
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: -2.5px;
+         }
+
+         input[type=range]:focus::-webkit-slider-runnable-track {
+            background: rgba(189, 189, 189, 0.57);
+         }
+
+         input[type=range]::-moz-range-track {
+            width: 100%;
+            height: 5px;
+            cursor: pointer;
+            animate: 0.2s;
+            background: rgba(189, 189, 189, 0.57);
+         }
+
+         input[type=range]::-moz-range-thumb {
+            height: 10px;
+            width: 30px;
+            background: var(--pagination-dots-bg);
+            cursor: pointer;
+         }
+
+         input[type=range]::-ms-track {
+            width: 100%;
+            height: 5px;
+            cursor: pointer;
+            animate: 0.2s;
+         }
+
+         input[type=range]::-ms-fill-lower {
+            background: rgba(189, 189, 189, 0.57);
+         }
+
+         input[type=range]::-ms-fill-upper {
+            background: rgba(189, 189, 189, 0.57);
+         }
+
+         input[type=range]::-ms-thumb {
+            margin-top: 1px;
+            height: 10px;
+            width: 30px;
+            background: var(--pagination-dots-bg);
+            cursor: pointer;
+         }
+
+         input[type=range]:focus::-ms-fill-lower {
+            background: rgba(189, 189, 189, 0.57);
+         }
+
+         input[type=range]:focus::-ms-fill-upper {
+            background: rgba(189, 189, 189, 0.57);
          }
 
       }
@@ -343,8 +418,86 @@
             }
          }
 
-         &-dots {
-            width: 140px;
+         &-scroll {
+
+            input[type=range] {
+               height: 5px;
+               -webkit-appearance: none;
+               width: 140px;
+               background: rgba(189, 189, 189, 0.57);
+            }
+   
+            input[type=range]:focus {
+               outline: none;
+            }
+   
+            input[type=range]::-webkit-slider-runnable-track {
+               width: 100%;
+               height: 5px;
+               cursor: pointer;
+               animate: 0.2s;
+               background: rgba(189, 189, 189, 0.57);
+            }
+   
+            input[type=range]::-webkit-slider-thumb {
+               height: 10px;
+               width: 17px;
+               background: var(--pagination-dots-bg);
+               cursor: pointer;
+               -webkit-appearance: none;
+               margin-top: -2.5px;
+            }
+   
+            input[type=range]:focus::-webkit-slider-runnable-track {
+               background: rgba(189, 189, 189, 0.57);
+            }
+   
+            input[type=range]::-moz-range-track {
+               width: 100%;
+               height: 5px;
+               cursor: pointer;
+               animate: 0.2s;
+               background: rgba(189, 189, 189, 0.57);
+            }
+   
+            input[type=range]::-moz-range-thumb {
+               height: 10px;
+               width: 17px;
+               background: var(--pagination-dots-bg);
+               cursor: pointer;
+            }
+   
+            input[type=range]::-ms-track {
+               width: 100%;
+               height: 5px;
+               cursor: pointer;
+               animate: 0.2s;
+            }
+   
+            input[type=range]::-ms-fill-lower {
+               background: rgba(189, 189, 189, 0.57);
+            }
+   
+            input[type=range]::-ms-fill-upper {
+               background: rgba(189, 189, 189, 0.57);
+            }
+   
+            input[type=range]::-ms-thumb {
+               margin-top: 1px;
+               height: 10px;
+               width: 17px;
+               background: var(--pagination-dots-bg);
+               cursor: pointer;
+            }
+   
+            input[type=range]:focus::-ms-fill-lower {
+               background: rgba(189, 189, 189, 0.57);
+            }
+   
+            input[type=range]:focus::-ms-fill-upper {
+               background: rgba(189, 189, 189, 0.57);
+            }
+   
          }
       }
    }

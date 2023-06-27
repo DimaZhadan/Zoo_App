@@ -15,7 +15,7 @@ const Slider = () => {
    const [swipeInfo, setSwipeInfo] = useState(false);
    const [transitionX, setTransitionX] = useState(0);
    const [itemId, setItemId] = useState('02');
-   const [value, setValue] = useState(0);
+   const [value, setValue] = useState(2);
 
    const onMouseDown = useCallback(e => {
       if (swipeInfo) return;
@@ -93,7 +93,7 @@ const Slider = () => {
       setValue(e.target.value);
       let bias;
       if (window.innerWidth > 576) {
-         bias = 200;
+         bias = 170;
       } else {
          bias = 100;
       }
@@ -106,7 +106,6 @@ const Slider = () => {
       }
    };
 
-   console.log(value);
    const elements = data.map((item, i) => {
       return (
          <div className={'preview__slider-item ' + item.classBg}
@@ -155,7 +154,7 @@ const Slider = () => {
                      min={0}
                      max={8}
                      step={1}
-                     defaultValue={2}
+                     defaultValue={value}
                      className='preview__slider-dots'
                      onInput={e => onScrollClick(e)}
                   ></input>
